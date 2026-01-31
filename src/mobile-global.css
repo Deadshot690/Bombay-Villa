@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+  /* General container and layout adjustments */
+  .container, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 100% !important;
+  }
+  .flex, .md\:flex-row, .md\:flex-col {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .items-center, .justify-center {
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+  /* Headings and text */
+  h1, .text-5xl, .text-4xl, .text-3xl {
+    font-size: 2rem !important;
+  }
+  h2, .text-2xl {
+    font-size: 1.3rem !important;
+  }
+  h3, .text-xl {
+    font-size: 1.1rem !important;
+  }
+  p, .text-base, .text-lg {
+    font-size: 1rem !important;
+  }
+  /* Images */
+  img, .responsive-img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 1rem !important;
+  }
+  /* Cards and sections */
+  .card, .rounded-3xl, .rounded-xl, .shadow-2xl, .shadow-lg {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 1.5rem 1rem !important;
+    margin: 0 auto 1.5rem auto !important;
+  }
+  /* Timeline and lists */
+  .timeline, .list, ul {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .timeline li, ul li {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    margin-bottom: 2rem !important;
+  }
+  /* Buttons */
+  button, .btn, .Button {
+    width: 100% !important;
+    font-size: 1.1rem !important;
+    padding: 0.8rem 1rem !important;
+  }
+  /* Hide custom cursor on mobile */
+  .custom-cursor, .CustomCursor {
+    display: none !important;
+  }
+}
