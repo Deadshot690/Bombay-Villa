@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="/logo.png" alt="Logo" width="120" />
-</p>
-
 # Real Estate Website
 
 A modern, fully responsive real estate platform built with React.js and Tailwind CSS. This website showcases luxury villas, apartments, and commercial properties, providing users with a seamless and engaging experience.
