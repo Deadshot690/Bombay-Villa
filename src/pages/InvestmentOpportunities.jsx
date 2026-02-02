@@ -1,9 +1,9 @@
-import React from "react";
-import Container from "../components/Container";
 
-import pharmaciesImg from "../Assets/pharmacies3.jpg";
+import React, { useRef } from "react";
+import Container from "../components/Container";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+
+const pharmaciesImg = "/images/villa.jpg";
 
 const InvestmentOpportunities = () => {
   // Parallax effect for hero image
@@ -14,7 +14,7 @@ const InvestmentOpportunities = () => {
   return (
     <div>
       {/* Hero Section with parallax, animated border, and text effects */}
-      <div className="relative w-full h-[480px] md:h-[600px] flex items-center justify-center overflow-hidden" ref={heroRef}>
+      <div className="relative w-full h-[650px] md:h-[850px] flex items-center justify-center overflow-hidden" ref={heroRef}>
         <motion.div
           className="absolute inset-0 z-0"
           style={{ y: yHero }}

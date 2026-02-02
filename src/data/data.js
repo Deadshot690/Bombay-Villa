@@ -1,68 +1,58 @@
-import testimonialsImg from "../Assets/office-1.jpg";
-import investmentImg from "../Assets/pharmacies3.jpg";
-import siteVisitImg from "../Assets/administrative.jpg";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+const testimonialsImg = "/images/new1.jpeg";
+const investmentImg = "/images/investment.jpg";
+const siteVisitImg = "/images/sitevisit.jpg";
+const experienceIcon = "/images/experience-iconnn.png";
+const trustIcon = "/images/trust-icon.png";
+const varietyIcon = "/images/variety-icon.png";
+const phone = "/images/phone.png";
+const email = "/images/email.png";
+const location = "/images/location-1.png";
+const villa1 = "/images/villa1.jpg";
+const villa2 = "/images/villa2.jpeg";
+const villa3 = "/images/villa3.jpeg";
+const villa4 = "/images/villa4.jpeg";
+const villa5 = "/images/villa5.jpg";
+const apartment1 = "/images/img1.jpeg";
+const apartment2 = "/images/img2.jpeg";
+const apartment3 = "/images/img3.jpeg";
+const apartment4 = "/images/img4.jpeg";
+const apartment5 = "/images/img5.jpeg";
+const apartment6 = "/images/img6.jpg";
+const hotelApartment1 = "/images/main.JPG";
+const hotelApartment2 = "/images/IMG_1007.JPG";
+const hotelApartment3 = "/images/IMG_1312.JPG";
+const hotelApartment4 = "/images/IMG_1607.JPG";
+const hotelApartment5 = "/images/IMG_1634.JPG";
+const commercial1 = "/images/r1.jpg";
+const commercial2 = "/images/r2.jpeg";
+const commercial3 = "/images/r3.jpeg";
+const commercial4 = "/images/r4.jpeg";
+const commercial5 = "/images/r5.jpeg";
+const commercial6 = "/images/Bombay-Villa3.JPG";
+const administrative1 = "/images/New.jpeg";
+const administrative2 = "/images/new1.jpeg";
+const administrative3 = "/images/new2.jpeg";
+const administrative4 = "/images/new3.jpeg";
+const administrative5 = "/images/new4.jpeg";
+const administrative6 = "/images/new5.jpeg";
+const medical = "/images/medical.jpg";
+const medica2 = "/images/vision.jpg";
+const medica3 = "/images/logo.jpg";
+const medica4 = "/images/IMG_1636.JPG";
+const medica5 = "/images/IMG_20260202_134023.jpg";
 
 
 
 
-import experienceIcon from "../Assets/experience-iconnn.png";
-import trustIcon from "../Assets/trust-icon.png";
-import varietyIcon from "../Assets/variety-icon.png";
+const medica6 = "/images/IMG_20260202_134038.jpg";
 
-import phone from "../Assets/phone.png";
-import email from "../Assets/email.png";
-import location from "../Assets/location-1.png";
-
-import villa1 from "../Assets/villa5.jpg";
-import villa2 from "../Assets/villa2.jpg";
-import villa3 from "../Assets/villa.jpg";
-import villa4 from "../Assets/villa4.jpeg";
-import villa5 from "../Assets/villa5.jpg";
-
-import apartment1 from "../Assets/apartemn1.jpg";
-import apartment2 from "../Assets/apartemn2.jpg";
-import apartment3 from "../Assets/apartemn3.jpg";
-import apartment4 from "../Assets/apartemn4.jpeg";
-import apartment5 from "../Assets/apartemn5.jpg";
-import apartment6 from "../Assets/apartemn6.jpeg";
-
-import hotelApartment1 from "../Assets/tower1.jpeg";
-import hotelApartment2 from "../Assets/towe2.jpg";
-import hotelApartment3 from "../Assets/towe3.jpg";
-import hotelApartment4 from "../Assets/tower4.jpg";
-import hotelApartment5 from "../Assets/tower5.jpg";
-
-import commercial1 from "../Assets/commercial1.jpg";
-import commercial2 from "../Assets/commercial2.jpeg";
-import commercial3 from "../Assets/commercial3.jpg";
-import commercial4 from "../Assets/commercial4.jpg";
-import commercial5 from "../Assets/commercial5.jpg";
-import commercial6 from "../Assets/commercial6.jpeg";
-
-import administrative1 from "../Assets/administrative1.jpg";
-import administrative2 from "../Assets/administrative2.jpg";
-import administrative3 from "../Assets/administrative3.jpg";
-import administrative4 from "../Assets/administrative4.jpeg";
-import administrative5 from "../Assets/administrative5.jpg";
-import administrative6 from "../Assets/administrative6.jpg";
-
-import medical from "../Assets/medical1.jpg";
-import medica2 from "../Assets/medical2.png";
-import medica3 from "../Assets/medical3.png";
-import medica4 from "../Assets/medical4.jpg";
-import medica5 from "../Assets/medical5.jpg";
-import medica6 from "../Assets/medical6.jpg";
-
-import pharmacy1 from "../Assets/pharmacies1.jpg";
-import pharmacy2 from "../Assets/pharmacies2.jpg";
-import pharmacy3 from "../Assets/pharmacies3.jpg";
-import pharmacy4 from "../Assets/pharmacies4.jpg";
-import pharmacy5 from "../Assets/pharmacies5.jpg";
-import pharmacy6 from "../Assets/pharmacies6.jpg";
-
-
-import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+const pharmacy1 = "/images/v1.jpeg";
+const pharmacy2 = "/images/v2.jpeg";
+const pharmacy3 = "/images/v3.jpeg";
+const pharmacy4 = "/images/v4.jpeg";
+const pharmacy5 = "/images/v5.jpg";
+const pharmacy6 = "/images/IMG_20260202_134052.jpg";
 
 export const footerIcons = [
   { id: 1, icon: FaInstagram },
@@ -119,42 +109,42 @@ export const projectsData = [
     id: 1,
     title: "Shahpur Villas",
     description: "Private bungalow living surrounded by nature and open landscapes.",
-    image: villa1,
+    image: "/images/hotel-apartment.jpg",
     to: "/projects/shahpur",
   },
   {
     id: 2,
     title: "Kasara Villas",
     description: "Modern villas in Kasara featuring elegant architecture, advanced amenities, and tranquil surroundings. Perfect for those seeking comfort and sophistication.",
-    image: villa2,
+    image: "/images/IMG_4607.JPG",
     to: "/projects/kasara",
   },
   {
     id: 3,
     title: "Igatpuri Villas",
     description: "Luxury villas in Igatpuri designed for relaxation and exclusivity. Experience breathtaking views, premium finishes, and a serene lifestyle close to nature.",
-    image: villa3,
+    image: "/images/IMG.jpg",
     to: "/projects/igatpuri",
   },
   {
     id: 4,
     title: "What Our Clients Say",
     description: "Read real stories and testimonials from our villa owners. Discover how our commitment to quality and service has helped families find their dream homes.",
-    image: testimonialsImg,
+    image: "/images/office-1.jpg",
     to: "/testimonials",
   },
   {
     id: 5,
     title: "Investment Opportunities",
     description: "Explore the financial benefits of owning a villa with us. Learn about high returns, rental potential, and long-term value in prime locations.",
-    image: investmentImg,
+    image: "/images/villa.jpg",
     to: "/investment",
   },
   {
     id: 6,
     title: "Gallery",
     description: "Browse our gallery of photos and videos to experience the beauty, lifestyle, and ambiance of our projects.",
-    image: siteVisitImg,
+    image: "/images/woman-working-pharmacy-wearing-coat.jpg",
     to: "/gallery",
   },
 ];

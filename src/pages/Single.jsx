@@ -1,11 +1,4 @@
-import Ibv1 from "../Assets/I-Bomaby-Villa.JPG";
-import Ibv2 from "../Assets/I-Bomaby-Villa1.JPG";
-import Ibv3 from "../Assets/I-Bomaby-Villa2.JPG";
-import Ibv4 from "../Assets/I-Bomaby-Villa3.JPG";
-import Kbv1 from "../Assets/K-Bombay-villa.JPG";
-import Kbv2 from "../Assets/K-Bombay-Villa1.JPG";
-import Kbv3 from "../Assets/K-Bombay-Villa2.JPG";
-import Kbv4 from "../Assets/K-Bombay-Villa3.JPG";
+// ...removed image imports, use public/images path instead
 
 import { useParams } from "react-router-dom";
 import useDocumentMeta from "../theme/useDocumentMeta";
@@ -20,10 +13,7 @@ import {
   projectsData,
 } from "../data/data";
 
-import Sbv1 from "../Assets/S-bombay-villa.JPG";
-import Sbv2 from "../Assets/S-bombay-villa1.JPG";
-import Sbv3 from "../Assets/S-Bombay-villa3.JPG";
-import Sbv4 from "../Assets/S-Bombay-villa4.JPG";
+// ...removed image imports, use public/images path instead
 import HeroSection from "../components/heroSection/HeroSection";
 import Container from "../components/Container";
 
@@ -59,27 +49,27 @@ function Single() {
       break;
     case "apartment":
       data = apartmentsData;
-      image = "../Assets/Apartment.jpg";
+      image = "/images/Apartment.jpg";
       break;
     case "hotelApartment":
       data = hotelApartmentsData;
-      image = "../Assets/hotel-apartment.jpg";
+      image = "/images/hotel-apartment.jpg";
       break;
     case "commercial":
       data = commercialData;
-      image = "../Assets/commercial-1.jpg";
+      image = "/images/commercial-1.jpg";
       break;
     case "administrative":
       data = administrativeData;
-      image = "../Assets/administrative.jpg";
+      image = "/images/administrative.jpg";
       break;
     case "medical":
       data = medicalData;
-      image = "../Assets/commercial-1.jpg";
+      image = "/images/commercial-1.jpg";
       break;
     case "pharmacies":
       data = pharmaciesData;
-      image = "../Assets/woman-working-pharmacy-wearing-coat.jpg";
+      image = "/images/woman-working-pharmacy-wearing-coat.jpg";
       break;
     default:
       data = null;
@@ -96,22 +86,22 @@ function Single() {
   if (id === "igatpuri" && data && data[0]) {
     const gallery = [
       {
-        img: Ibv1,
+        img: "/images/I-Bomaby-Villa.JPG",
         title: "Mountain View Retreat",
         desc: "Wake up to breathtaking mountain vistas and crisp air, with every villa designed to maximize the natural beauty of Igatpuri."
       },
       {
-        img: Ibv2,
+        img: "/images/I-Bomaby-Villa1.JPG",
         title: "Lush Courtyards",
         desc: "Private courtyards filled with greenery offer a peaceful escape and a perfect setting for morning coffee or evening gatherings."
       },
       {
-        img: Ibv3,
+        img: "/images/I-Bomaby-Villa2.JPG",
         title: "Open-Plan Living",
         desc: "Spacious interiors flow seamlessly to the outdoors, creating a sense of freedom and connection to nature."
       },
       {
-        img: Ibv4,
+        img: "/images/I-Bomaby-Villa3.JPG",
         title: "Tranquil Water Features",
         desc: "Elegant water features and landscaped gardens bring a sense of calm and timeless luxury to every villa."
       },
@@ -127,7 +117,7 @@ function Single() {
           <div className="relative top-[-100px] flex flex-col md:flex-row items-center justify-center gap-12 min-h-[480px]">
             {/* Text Section - slides in from left */}
             <div
-              className="flex-1 max-w-xl text-left md:pr-8 pr-0 mb-10 md:mb-0"
+              className="flex-[0.8] max-w-lg text-left md:pr-8 pr-0 mb-10 md:mb-0"
               style={{ zIndex: 2 }}
               data-aos="fade-right"
               data-aos-duration="1200"
@@ -148,16 +138,16 @@ function Single() {
             {/* Image Card - slides in from right */}
             <div
               key={data[0].id}
-              className="flex-1 max-w-md w-full bg-[#232323] rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center relative group"
-              style={{ minHeight: 380 }}
+              className="flex-[1.2] max-w-2xl w-full bg-[#232323] rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center relative group"
+              style={{ minHeight: 480 }}
               data-aos="fade-left"
               data-aos-duration="1200"
             >
               <img
                 src={data[0].image}
                 alt={data[0].title}
-                className="w-full h-[380px] object-cover rounded-3xl transition-transform duration-300 group-hover:scale-105"
-                style={{ display: 'block' }}
+                className="w-full h-[480px] object-cover rounded-3xl transition-transform duration-300 group-hover:scale-105"
+                style={{ display: 'block', maxHeight: 480 }}
               />
               <div className="absolute inset-0 rounded-3xl pointer-events-none group-hover:bg-gradient-to-br group-hover:from-yellow-200/10 group-hover:to-yellow-400/10 transition duration-300" />
             </div>
@@ -172,17 +162,17 @@ function Single() {
                 data-aos-delay={String(100 + idx * 100)}
                 data-aos-duration="1000"
               >
-                <div className="relative md:w-1/2 w-full flex-shrink-0 overflow-hidden">
+                <div className="relative md:w-2/3 w-full flex-shrink-0 overflow-hidden">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-[220px] md:h-full object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-t-none transition-transform duration-500 group-hover:scale-110 group-hover:brightness-105"
+                    className="w-full h-[320px] md:h-[420px] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-t-none transition-transform duration-500 group-hover:scale-110 group-hover:brightness-105"
                   />
                   <div className="absolute inset-0 rounded-2xl pointer-events-none group-hover:bg-gradient-to-br group-hover:from-yellow-200/10 group-hover:to-yellow-400/20 transition duration-300" />
                   {/* Gold glow border on hover */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-yellow-400 group-hover:shadow-[0_0_32px_0_rgba(255,215,0,0.25)] transition-all duration-300 pointer-events-none" />
                 </div>
-                <div className="flex-1 flex flex-col justify-center p-6">
+                <div className="flex-1 flex flex-col justify-center p-4 md:p-6 text-sm md:text-base">
                   <h3 className="text-xl font-bold text-yellow-200 mb-2 group-hover:text-yellow-300 transition-colors duration-300">{item.title}</h3>
                   <p className="text-gray-100 text-base leading-relaxed group-hover:text-white transition-colors duration-300">{item.desc}</p>
                 </div>
@@ -198,22 +188,22 @@ function Single() {
   if (id === "shahpur" && data && data[0]) {
     const gallery = [
       {
-        img: Sbv1,
+        img: "/images/S-bombay-villa.JPG",
         title: "Poolside Serenity",
         desc: "A tranquil poolside retreat, perfect for unwinding in the privacy of your own villa. Lush landscaping and modern design create a seamless indoor-outdoor living experience."
       },
       {
-        img: Sbv2,
+        img: "/images/v5.jpg",
         title: "Contemporary Facade",
         desc: "Striking architecture with clean lines and natural textures, Shahpur Villas blends timeless elegance with a sense of openness and light."
       },
       {
-        img: Sbv3,
+        img: "/images/S-Bombay-villa3.JPG",
         title: "Sunlit Living Spaces",
         desc: "Expansive windows invite natural light, illuminating spacious interiors designed for comfort, calm, and effortless entertaining."
       },
       {
-        img: Sbv4,
+        img: "/images/v1.jpeg",
         title: "Private Green Escape",
         desc: "Each villa is surrounded by greenery, offering a peaceful sanctuary where you can reconnect with nature and enjoy true privacy."
       },
@@ -274,11 +264,11 @@ function Single() {
                 data-aos-delay={String(100 + idx * 100)}
                 data-aos-duration="1000"
               >
-                <div className="relative md:w-1/2 w-full flex-shrink-0 overflow-hidden">
+                <div className="relative md:w-2/3 w-full flex-shrink-0 overflow-hidden">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-[220px] md:h-full object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-t-none transition-transform duration-500 group-hover:scale-110 group-hover:brightness-105"
+                    className="w-full h-[320px] md:h-[420px] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-t-none transition-transform duration-500 group-hover:scale-110 group-hover:brightness-105"
                   />
                   <div className="absolute inset-0 rounded-2xl pointer-events-none group-hover:bg-gradient-to-br group-hover:from-yellow-200/10 group-hover:to-yellow-400/20 transition duration-300" />
                   {/* Gold glow border on hover */}
@@ -300,22 +290,22 @@ function Single() {
   if (id === "kasara" && data && data[0]) {
     const gallery = [
       {
-        img: Kbv1,
+        img: "/images/K-Bombay-villa.JPG",
         title: "Elegant Outdoor Living ",
         desc: "Spacious terraces and open-air lounges invite you to enjoy the outdoors in style, surrounded by greenery and fresh air."
       },
       {
-        img: Kbv2,
+        img: "/images/img5.jpeg",
         title: "Modern Villa Design",
         desc: "Contemporary architecture with expansive glass and natural stone, blending sophistication with comfort in every detail."
       },
       {
-        img: Kbv3,
+        img: "/images/K-Bombay-Villa2.JPG",
         title: "Infinity Pool Views",
         desc: "A stunning infinity pool overlooks the lush landscape, offering a serene escape and a perfect spot for relaxation or entertaining guests."
       },
       {
-        img: Kbv4,
+        img: "/images/IMG_20260202_134038.jpg",
         title: "Grand Entrance",
         desc: "A dramatic entryway welcomes you home, setting the tone for luxury and exclusivity throughout the Kasara Villas experience."
       },
@@ -376,11 +366,11 @@ function Single() {
                 data-aos-delay={String(100 + idx * 100)}
                 data-aos-duration="1000"
               >
-                <div className="relative md:w-1/2 w-full flex-shrink-0 overflow-hidden">
+                <div className="relative md:w-2/3 w-full flex-shrink-0 overflow-hidden">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-[220px] md:h-full object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-t-none transition-transform duration-500 group-hover:scale-110 group-hover:brightness-105"
+                    className="w-full h-[320px] md:h-[420px] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-t-none transition-transform duration-500 group-hover:scale-110 group-hover:brightness-105"
                   />
                   <div className="absolute inset-0 rounded-2xl pointer-events-none group-hover:bg-gradient-to-br group-hover:from-yellow-200/10 group-hover:to-yellow-400/20 transition duration-300" />
                   {/* Gold glow border on hover */}

@@ -1,6 +1,7 @@
-import photo from "../../Assets/heroSection.jpg";
+
 import styles from "./HeroSection.module.css";
 import { motion } from "framer-motion";
+const photo = "/images/heroSection.jpg";
 
 function HeroSection({ image, page }) {
   return (

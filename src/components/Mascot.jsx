@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mascotImg from "../Assets/Moscot-removebg-preview.png";
+const mascotImg = "/images/Moscot-removebg-preview.png";
 
 import { useEffect, useState } from "react";
 

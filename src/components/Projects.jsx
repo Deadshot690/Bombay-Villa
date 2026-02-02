@@ -43,6 +43,7 @@ function Projects({ onlyLocations = false }) {
                       height: '100%',
                       maxHeight: 300,
                       objectFit: 'cover',
+                      objectPosition: p.title === "What Our Clients Say" ? 'center top' : 'center',
                       background: '#181818',
                       boxShadow: '0 2px 16px 0 rgba(0,0,0,0.18)'
                     }}

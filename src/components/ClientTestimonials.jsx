@@ -82,15 +82,16 @@ function ClientTestimonials() {
       <Container>
         <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 lg:gap-0 w-full max-w-[1400px] mx-auto relative">
           {clientTestimonialsData.map((el, idx) => (
-            <>
-              <StatBlock el={el} idx={idx} key={el.id} />
+            <div key={el.id || idx} style={{ display: 'contents' }}>
+              <StatBlock el={el} idx={idx} />
               {idx !== clientTestimonialsData.length - 1 && (
                 <div
+                  key={"divider-" + (el.id || idx)}
                   className="hidden lg:block h-[120px] w-[2px] mx-2 my-auto"
                   style={{ background: "linear-gradient(180deg,#FFD700 0%,#FFD70044 100%)", borderRadius: 2, boxShadow: "0 0 12px #FFD70033" }}
                 />
               )}
-            </>
+            </div>
           ))}
         </div>
       </Container>

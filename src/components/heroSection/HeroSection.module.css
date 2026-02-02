@@ -2,23 +2,17 @@
   position: relative;
 }
 
+/* Adjust background position to show villa and pool */
 .background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(3px);
+  /* Removed blur for logo clarity */
   background-size: cover;
+  background-position: center top;
   z-index: -1;
-  backdrop-filter: blur(3px);
-  -webkit-filter: blur(3px);
 }
 
-.hero-section::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-}
+
