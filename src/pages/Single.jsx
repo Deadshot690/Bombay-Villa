@@ -96,7 +96,7 @@ function Single() {
         desc: "Private courtyards filled with greenery offer a peaceful escape and a perfect setting for morning coffee or evening gatherings."
       },
       {
-        img: "/images/I-Bomaby-Villa2.JPG",
+          img: "/images/Bombay-Villa3.JPG",
         title: "Open-Plan Living",
         desc: "Spacious interiors flow seamlessly to the outdoors, creating a sense of freedom and connection to nature."
       },
