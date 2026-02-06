@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { isDesktopDevice } from "./deviceUtils";
 
 // Custom cursor component
 export default function CustomCursor() {
@@ -20,12 +21,14 @@ export default function CustomCursor() {
     return () => window.removeEventListener("mousemove", moveCursor);
   }, [x, y]);
 
-  // Hide default cursor
+  // Hide default cursor only on desktop devices
   useEffect(() => {
-    document.body.style.cursor = "none";
-    return () => {
-      document.body.style.cursor = "";
-    };
+    if (isDesktopDevice()) {
+      document.body.style.cursor = "none";
+      return () => {
+        document.body.style.cursor = "";
+      };
+    }
   }, []);
 
   return (
