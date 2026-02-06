@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { About, Contact, Home, NotFound, Projects, Single, Testimonials, InvestmentOpportunities, Gallery } from "./pages";
-import { Shahpur, Kasara, Igatpuri } from "./pages";
+// Removed unused Shahpur, Kasara, and Igatpuri imports
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -47,6 +47,7 @@ function App() {
             <Routes location={location}>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
+              {/* Removed Shahpur route to restore old routing */}
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/testimonials" element={<Testimonials />} />

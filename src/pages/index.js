@@ -11,6 +11,4 @@ export { default as InvestmentOpportunities } from "./InvestmentOpportunities";
 
 export { default as Gallery } from "./Gallery";
 
-export { default as Shahpur } from "./Shahpur";
-export { default as Kasara } from "./Kasara";
-export { default as Igatpuri } from "./Igatpuri";
+// Removed Shahpur export to restore old routing

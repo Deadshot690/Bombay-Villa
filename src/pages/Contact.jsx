@@ -6,7 +6,7 @@ import HeroSection from "../components/heroSection/HeroSection";
 function Contact() {
   return (
     <div>
-      <HeroSection page={"Contact"} />
+      <HeroSection page={"Contact"} image="/images/villa5.jpg" />
       <div className=" text-white">
         <ContactForm />
         <ContactInfo />

@@ -10,8 +10,9 @@ function About() {
     <div>
       <HeroSection page={"About"} image={aboutHeroImg} />
       <WhoWeAre />
-      <ClientTestimonials />
+      {/* Insert professional cards below timeline, above Our Values */}
       <AboutUs />
+      <ClientTestimonials />
     </div>
   );
 }
