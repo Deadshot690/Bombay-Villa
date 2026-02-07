@@ -1,15 +1,4 @@
-/* Prevent native pointer/grab/move cursors on desktop when custom cursor is active */
-@media (hover: hover) and (pointer: fine) {
-  html, body, button, a, [role="button"], [tabindex], input, textarea, select, * {
-    cursor: none !important;
-  }
-}
-/* Hide all native cursors on touch devices (mobile/tablet) */
-@media (hover: none) and (pointer: coarse) {
-  html, body, * {
-    cursor: none !important;
-  }
-}
+/* Removed custom cursor styles to restore native mouse cursor */
 
 
 @tailwind base;

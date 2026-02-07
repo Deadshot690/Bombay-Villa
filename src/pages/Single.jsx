@@ -34,16 +34,20 @@ function Single() {
     case "shahpur":
       data = [projectsData.find((p) => p.to === "/projects/shahpur")];
       image = projectsData.find((p) => p.to === "/projects/shahpur")?.image;
-      metaTitle = "Shahpur Villas | Bombay Villa Advisory";
+      metaTitle = "Shahpur | Bombay Villa Advisory";
       metaDescription = "Private bungalow living in Shahpur designed for space, privacy, and calm living.";
       break;
     case "kasara":
       data = [projectsData.find((p) => p.to === "/projects/kasara")];
       image = projectsData.find((p) => p.to === "/projects/kasara")?.image;
+      metaTitle = "Kasara | Bombay Villa Advisory";
+      metaDescription = "Modern villas in Kasara featuring elegant architecture, advanced amenities, and tranquil surroundings. Perfect for those seeking comfort and sophistication.";
       break;
     case "igatpuri":
       data = [projectsData.find((p) => p.to === "/projects/igatpuri")];
       image = projectsData.find((p) => p.to === "/projects/igatpuri")?.image;
+      metaTitle = "Igatpuri | Bombay Villa Advisory";
+      metaDescription = "Luxury villas in Igatpuri designed for relaxation and exclusivity. Experience breathtaking views, premium finishes, and a serene lifestyle close to nature.";
       break;
     case "villa":
       data = villaData;
@@ -84,7 +88,7 @@ function Single() {
     description: metaDescription,
   });
 
-  // Custom content for Shahpur Villas
+  // Custom content for Shahpur
   if (id === "shahpur" && data && data[0]) {
     const gallery = [
       {
@@ -95,7 +99,7 @@ function Single() {
       {
         img: "/images/r3.jpeg",
         title: "Contemporary Facade",
-        desc: "Striking architecture with clean lines and natural textures, Shahpur Villas blends timeless elegance with a sense of openness and light."
+        desc: "Striking architecture with clean lines and natural textures, Shahpur blends timeless elegance with a sense of openness and light."
       },
       {
         img: "/images/S-Bombay-villa3.JPG",
@@ -111,7 +115,7 @@ function Single() {
     return (
       <div>
         <HeroSection
-          page="Shahpur Villas"
+          page="Shahpur"
           image={image}
           subheading="Private bungalow living in Shahpur designed for space, privacy, and calm living."
         />
@@ -125,14 +129,14 @@ function Single() {
               data-aos-duration="1200"
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gradient bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 bg-clip-text text-transparent tracking-tight">
-                Shahpur Villas
+                Shahpur
               </h2>
               <p className="text-lg md:text-xl text-yellow-200 mb-4 font-semibold">
                 Private bungalow living with space, privacy, and calm.
               </p>
               <hr className="border-yellow-500 mb-4 w-20" />
               <div className="text-base md:text-lg text-gray-100 leading-relaxed bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg border border-yellow-900/20">
-                Shahpur Villas is a tranquil development surrounded by nature.<br />
+                Shahpur is a tranquil development surrounded by nature.<br />
                 Designed for those who value privacy, open skies, and a peaceful lifestyle.<br />
                 Each villa is crafted for relaxation, comfort, and timeless elegance.
               </div>
@@ -191,8 +195,8 @@ function Single() {
                 <li>Table Tennis</li>
                 <li>Carrom Board</li>
                 <li>Chess</li>
-                <li>Fuss Ball</li>
-                <li>Table of Ludo Game</li>
+                <li>Bowling Alley</li>
+                <li>ATV Bikes</li>
                 <li>Badminton</li>
                 <li>Box Cricket</li>
                 <li>Utility Shop</li>
@@ -201,9 +205,9 @@ function Single() {
                 <li>Kids Play Area*</li>
                 <li>Basket Ball</li>
                 <li>Gym</li>
-                <li>Archery</li>
+                <li>Pickle Ball Court</li>
                 <li>Table of Snake Ladder Game</li>
-                <li>Party Hall</li>
+                <li>Private Pool Room</li>
                 <li>Private Pool</li>
                 <li>Food Court</li>
                 <li>Lawn Area</li>
@@ -275,7 +279,7 @@ function Single() {
     return (
       <div>
         <HeroSection
-          page="Igatpuri Villas"
+          page="Igatpuri"
           image={image}
           subheading="A hillside villa community designed for peace, views, and natural living."
         />
@@ -289,14 +293,14 @@ function Single() {
               data-aos-duration="1200"
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gradient bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 bg-clip-text text-transparent tracking-tight">
-                Igatpuri Villas
+                Igatpuri
               </h2>
               <p className="text-lg md:text-xl text-yellow-200 mb-4 font-semibold">
                 Hillside villa living with panoramic views and natural tranquility.
               </p>
               <hr className="border-yellow-500 mb-4 w-20" />
               <div className="text-base md:text-lg text-gray-100 leading-relaxed bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg border border-yellow-900/20">
-                Igatpuri Villas is a serene development nestled in the hills.<br />
+                Igatpuri is a serene development nestled in the hills.<br />
                 Designed for those who value peace, open skies, and a close connection to nature.<br />
                 Each villa is crafted for relaxation, privacy, and timeless comfort.
               </div>
@@ -403,7 +407,7 @@ function Single() {
                 className="bg-[#181818] rounded-2xl shadow-lg border border-yellow-700 p-8 flex flex-col justify-between w-full md:flex-1 md:max-w-full"
                 initial={{ opacity: 0, y: 60, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 1.1, delay: idx * 0.18, ease: 'easeInOut' }}
                 whileHover={{ scale: 1.045, boxShadow: "0 8px 32px 0 #FFD70033" }}
               >
@@ -474,7 +478,7 @@ function Single() {
           <div className="mt-20 flex flex-wrap justify-center gap-8 py-12">
             {[
               {
-                title: 'Features of Poolcity, Kasara',
+                title: 'Features of Kasara',
                 content: <>
                   <ul className="list-disc ml-6 mt-2 mb-4">
                     <li><b>Samruddhi Expressway Connectivity</b><br/>Rapid, modern expressway access that dramatically cuts travel time to Mumbai and Nashik — ideal for weekend travellers and commuters.</li>
@@ -504,7 +508,7 @@ function Single() {
                 </>
               },
               {
-                title: 'Features of Bombay Villa Advisory, Kasara',
+                title: 'Features of Kasara',
                 content: <>
                   <ul className="list-disc ml-6 mt-2 mb-4">
                     <li><b>Samruddhi Expressway Connectivity</b><br/>Rapid, modern expressway access that dramatically cuts travel time to Mumbai and Nashik — ideal for weekend travellers and commuters.</li>
@@ -533,7 +537,7 @@ function Single() {
                 whileHover={{ scale: 1.045, boxShadow: "0 8px 32px 0 #FFD70033" }}
               >
                 <h3 className={
-                  card.title === 'Features of Poolcity, Kasara'
+                  card.title === 'Features of Kasara'
                     ? "text-2xl font-bold mb-2 text-yellow-400"
                     : "text-2xl font-bold mb-4 text-yellow-400"
                 }>{card.title}</h3>
@@ -546,7 +550,7 @@ function Single() {
     </div>
     );
   } else if (id === "kasara" && data && data[0]) {
-    // Custom content for Kasara Villas (move the code here from previous if)
+    // Custom content for Kasara (move the code here from previous if)
     const gallery = [
       {
         img: "/images/K-Bombay-villa.JPG",
@@ -564,15 +568,15 @@ function Single() {
         desc: "A stunning infinity pool overlooks the lush landscape, offering a serene escape and a perfect spot for relaxation or entertaining guests."
       },
       {
-        img: "/images/IMG_20260202_134038.jpg",
+        img: "/images/r5.jpeg",
         title: "Grand Entrance",
-        desc: "A dramatic entryway welcomes you home, setting the tone for luxury and exclusivity throughout the Kasara Villas experience."
+        desc: "A dramatic entryway welcomes you home, setting the tone for luxury and exclusivity throughout the Kasara experience."
       },
     ];
     return (
       <div>
         <HeroSection
-          page="Kasara Villas"
+          page="Kasara"
           image={image}
           subheading="A modern villa enclave designed for sophistication, comfort, and scenic living."
         />
@@ -586,14 +590,14 @@ function Single() {
               data-aos-duration="1200"
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gradient bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 bg-clip-text text-transparent tracking-tight">
-                Kasara Villas
+                Kasara
               </h2>
               <p className="text-lg md:text-xl text-yellow-200 mb-4 font-semibold">
                 Modern villa living with panoramic views and refined comfort.
               </p>
               <hr className="border-yellow-500 mb-4 w-20" />
               <div className="text-base md:text-lg text-gray-100 leading-relaxed bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg border border-yellow-900/20">
-                Kasara Villas is a contemporary development set amidst scenic surroundings.<br />
+                Kasara is a contemporary development set amidst scenic surroundings.<br />
                 Designed for those who appreciate modern architecture, open spaces, and a connection to nature.<br />
                 Every villa is crafted for comfort, elegance, and timeless appeal.
               </div>
@@ -618,7 +622,7 @@ function Single() {
           {/* Kasara Feature Cards Section - now above gallery, below hero section */}
           <div className="my-0 grid grid-cols-1 md:grid-cols-2 gap-2">
             {[{
-              title: 'Features of Bombay Villa Advisory, Kasara',
+              title: 'Features of Kasara',
               content: <>
                 <ul className="list-disc ml-6 mt-2 mb-4">
                   <li><b>Samruddhi Expressway Connectivity</b><br/>Rapid, modern expressway access that dramatically cuts travel time to Mumbai and Nashik — ideal for weekend travellers and commuters.</li>
@@ -637,7 +641,7 @@ function Single() {
                 </ul>
               </>
             }, {
-              title: 'Why choose Bombay Villa Advisory Kasara?',
+              title: 'Why choose Kasara?',
               content: <>
                 <ul className="list-disc ml-6 mt-2 mb-4">
                   <li><b>Surrounded by mountains</b><br/>Embrace tranquil living with our villas nestled amidst breathtaking mountains. Enjoy picturesque views, fresh air, and a serene environment, perfect for a peaceful and rejuvenating lifestyle away from the city's hustle and bustle.</li>

@@ -107,21 +107,21 @@ export const pharmaciesData = [
 export const projectsData = [
   {
     id: 1,
-    title: "Shahpur Villas",
+    title: "Shahpur",
     description: "Private bungalow living surrounded by nature and open landscapes.",
     image: "/images/hotel-apartment.jpg",
     to: "/projects/shahpur",
   },
   {
     id: 2,
-    title: "Kasara Villas",
+    title: "Kasara",
     description: "Modern villas in Kasara featuring elegant architecture, advanced amenities, and tranquil surroundings. Perfect for those seeking comfort and sophistication.",
     image: "/images/IMG_4607.JPG",
     to: "/projects/kasara",
   },
   {
     id: 3,
-    title: "Igatpuri Villas",
+    title: "Igatpuri",
     description: "Luxury villas in Igatpuri designed for relaxation and exclusivity. Experience breathtaking views, premium finishes, and a serene lifestyle close to nature.",
     image: "/images/IMG.jpg",
     to: "/projects/igatpuri",

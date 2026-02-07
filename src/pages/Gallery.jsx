@@ -16,7 +16,7 @@ const galleryImages = [
   "/images/IMG_1634.JPG",
   "/images/IMG_1636.JPG",
   "/images/IMG_20260202_134023.jpg",
-  "/images/IMG_20260202_134038.jpg",
+  "/images/img5.jpeg",
   "/images/IMG_20260202_134052.jpg",
   "/images/IMG_4607.JPG",
   "/images/IMG_4931.JPG",
@@ -27,9 +27,9 @@ const galleryImages = [
   "/images/I-Bomaby-Villa2.JPG",
   "/images/I-Bomaby-Villa3.JPG",
   "/images/K-Bombay-villa.JPG",
-  "/images/img5.jpeg",
+    "/images/IMG_20260202_134038.jpg",
   "/images/K-Bombay-Villa2.JPG",
-  "/images/IMG_20260202_134038.jpg",
+    "/images/img5.jpeg",
   "/images/New.jpeg",
   "/images/commercial-1.jpg",
   // "/images/email.png", // removed
@@ -40,7 +40,7 @@ const galleryImages = [
   "/images/img2.jpeg",
   "/images/img3.jpeg",
   "/images/img4.jpeg",
-  "/images/img5.jpeg",
+    "/images/img5.jpeg",
   //"/images/investment.jpg",
   // "/images/investment.jpg", // removed
   // "/images/location-1.png", // removed

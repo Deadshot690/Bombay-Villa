@@ -42,8 +42,8 @@ function AboutUs() {
           <li>Table Tennis</li>
           <li>Carrom Board</li>
           <li>Chess</li>
-          <li>Fuss Ball</li>
-          <li>Table of Ludo Game</li>
+          <li>Bowling Alley</li>
+          <li>ATV Bikes</li>
           <li>Badminton</li>
           <li>Box Cricket</li>
           <li>Utility Shop</li>
@@ -52,9 +52,9 @@ function AboutUs() {
           <li>Kids Play Area*</li>
           <li>Basket Ball</li>
           <li>Gym</li>
-          <li>Archery</li>
+          <li>Pickle Ball Court</li>
           <li>Table of Snake Ladder Game</li>
-          <li>Party Hall</li>
+          <li>Private Pool Room</li>
           <li>Private Pool</li>
           <li>Food Court</li>
           <li>Lawn Area</li>
