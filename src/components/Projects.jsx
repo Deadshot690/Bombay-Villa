@@ -17,30 +17,19 @@ function Projects({ onlyLocations = false }) {
     <div className="min-h-screen py-[80px] bg-[#0d0d0d] text-[#f7f7f7] transition-colors duration-500">
       <Container>
         {/* Animated Section Intro */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1.1, ease: 'easeInOut' }}
-          className="max-w-3xl mx-auto text-center mb-12 px-4"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-5 uppercase tracking-wider bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent drop-shadow-md">
+        <div className="max-w-3xl mx-auto text-center mb-12 px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5 uppercase tracking-wider text-yellow-400 drop-shadow-md">
             Boutique Villa Projects
           </h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
-            className="text-xl md:text-2xl text-gray-100 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm"
-          >
-            Each project is handpicked for its location, exclusivity, and long-term value. We focus on limited, boutique developments that offer a refined lifestyle and a sense of belonging.
-          </motion.p>
-        </motion.div>
+          <p className="text-lg md:text-xl text-gray-100 leading-relaxed font-normal max-w-2xl mx-auto drop-shadow-sm">
+            Select, private developments in sought-after locations.<br />
+            Designed for comfort, privacy, and lasting value.
+          </p>
+        </div>
 
-        <div className="font-bold">
-          <h3 className="text-center uppercase font-bold sm:text-xl text-lg">
-            Discover a Broad Range Of Units That Will Suit Your Needs
+        <div>
+          <h3 className="text-center uppercase font-medium sm:text-xl text-lg mb-2">
+            Project Highlights
           </h3>
 
           <div className="flex items-start gap-[20px] flex-wrap mt-[40px] mx-auto">

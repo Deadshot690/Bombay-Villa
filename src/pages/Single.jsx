@@ -2,6 +2,9 @@
 
 import { useParams, Link } from "react-router-dom";
 import Button from "../components/Button";
+import { amenityIcons } from "../components/AmenityIcons";
+import { kasaraFeatureIcons, kasaraWhyIcons } from "../components/KasaraIcons";
+import { igatpuriFeatureIcons, igatpuriConnectivityIcons, igatpuriLifestyleIcons, igatpuriInfraIcons, igatpuriOwnershipIcons } from "../components/IgatpuriIcons";
 import useDocumentMeta from "../theme/useDocumentMeta";
 import {
   administrativeData,
@@ -161,64 +164,89 @@ function Single() {
           {/* New Feature Cards Section for Shahpur */}
           <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1: Customized Villa & Resort Villa */}
-            <div className="bg-[#181818] rounded-2xl shadow-lg border border-yellow-700 p-8 flex flex-col justify-between w-full md:max-w-full">
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">Customized Villa</h3>
-              <p className="mb-2">Our collection of tailor-made villas offers a diverse range of options, from cozy 2 BHK to expansive 5 BHK residences, designed to suit your needs. These villas come in both compact and spacious layouts, ensuring flexibility and comfort. With areas spanning from 550 to 1500 sq.ft., you can find the perfect space that aligns with your preferences.</p>
-              <ul className="list-disc ml-6 mb-2">
-                <li>2 BHK (Compact) and 2 BHK (Spacious)</li>
-                <li>3 BHK (Compact) and 3 BHK (Spacious)</li>
-                <li>4 BHK (Compact)</li>
-              </ul>
-              <div className="mb-4">
-                <Link to="/contact">
-                  <Button>Get Details</Button>
-                </Link>
+            <motion.div
+              className="bg-[#181818] rounded-2xl shadow-lg border border-yellow-700 p-8 flex flex-col justify-between w-full md:max-w-full"
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.1, delay: 0, ease: 'easeInOut' }}
+              whileHover={{ scale: 1.045, boxShadow: "0 8px 32px 0 #FFD70033" }}
+            >
+              <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400">Customized Villa</h3>
+                <p className="mb-2 text-white">Our collection of tailor-made villas offers a diverse range of options, from cozy 2 BHK to expansive 5 BHK residences, designed to suit your needs. These villas come in both compact and spacious layouts, ensuring flexibility and comfort. With areas spanning from 550 to 1500 sq.ft., you can find the perfect space that aligns with your preferences.</p>
+                <ul className="list-disc ml-6 mb-2 text-white">
+                  <li>2 BHK (Compact) and 2 BHK (Spacious)</li>
+                  <li>3 BHK (Compact) and 3 BHK (Spacious)</li>
+                  <li>4 BHK (Compact)</li>
+                </ul>
+                <div className="mb-4">
+                  <Link to="/contact">
+                    <Button>Get Details</Button>
+                  </Link>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400">Resort Villa</h3>
+                <p className="mb-2 text-white">Our array of resort villas presents a variety of choices, ranging from 2 to 5 resort rooms, catering to your specific requirements. These villas offer areas spanning from 550 to 1100 sq.ft., providing ample space for your comfort and enjoyment.</p>
+                <ul className="list-disc ml-6 mb-2 text-white">
+                  <li>Options: 4 / 5 Studio Villa</li>
+                  <li>Only 8 Resort Villa Available</li>
+                </ul>
+                <div className="font-semibold text-yellow-300">
+                  <Link to="/contact">
+                    <Button>Get Details</Button>
+                  </Link>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">Resort Villa</h3>
-              <p className="mb-2">Our array of resort villas presents a variety of choices, ranging from 2 to 5 resort rooms, catering to your specific requirements. These villas offer areas spanning from 550 to 1100 sq.ft., providing ample space for your comfort and enjoyment.</p>
-              <ul className="list-disc ml-6 mb-2">
-                <li>Options: 4 / 5 Studio Villa</li>
-                <li>Only 8 Resort Villa Available</li>
-              </ul>
-              <div className="font-semibold text-yellow-300">
-                <Link to="/contact">
-                  <Button>Get Details</Button>
-                </Link>
-              </div>
-            </div>
+            </motion.div>
             {/* Card 2: 50+ Clubhouse Amenities */}
-            <div className="bg-[#181818] rounded-2xl shadow-lg border border-yellow-700 p-8 flex flex-col justify-between w-full md:max-w-full">
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">50+ Clubhouse Amenities</h3>
-              <p className="mb-2">Clubhouse amenities enhance the overall experience for members, providing a place to relax, exercise, socialize, and engage in various activities within a convenient and well-equipped setting.</p>
-              <ul className="list-disc ml-6 mb-2 columns-2 md:columns-2">
-                <li>Pool Table</li>
-                <li>Table Tennis</li>
-                <li>Carrom Board</li>
-                <li>Chess</li>
-                <li>Bowling Alley</li>
-                <li>ATV Bikes</li>
-                <li>Badminton</li>
-                <li>Box Cricket</li>
-                <li>Utility Shop</li>
-                <li>Wedding/Party Lawn</li>
-                <li>Volley Ball</li>
-                <li>Kids Play Area*</li>
-                <li>Basket Ball</li>
-                <li>Gym</li>
-                <li>Pickle Ball Court</li>
-                <li>Table of Snake Ladder Game</li>
-                <li>Private Pool Room</li>
-                <li>Private Pool</li>
-                <li>Food Court</li>
-                <li>Lawn Area</li>
-                <li>River facing views</li>
-                <li>Machan</li>
-                <li>Car Parking</li>
-                <li>Electricity</li>
-                <li>24/7 water supply</li>
-                <li>Mini Theatre</li>
-              </ul>
-            </div>
+            <motion.div
+              className="bg-[#181818] rounded-2xl shadow-lg border border-yellow-700 p-8 flex flex-col justify-between w-full md:max-w-full"
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.1, delay: 0.18, ease: 'easeInOut' }}
+              whileHover={{ scale: 1.045, boxShadow: "0 8px 32px 0 #FFD70033" }}
+            >
+              <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400">50+ Clubhouse Amenities</h3>
+                <p className="mb-2 text-white">Clubhouse amenities enhance the overall experience for members, providing a place to relax, exercise, socialize, and engage in various activities within a convenient and well-equipped setting.</p>
+                <ul className="list-disc ml-6 mb-2 columns-2 md:columns-2 text-white">
+                  {[
+                    'Pool Table',
+                    'Table Tennis',
+                    'Carrom Board',
+                    'Chess',
+                    'Bowling Alley',
+                    'ATV Bikes',
+                    'Badminton',
+                    'Box Cricket',
+                    'Utility Shop',
+                    'Wedding/Party Lawn',
+                    'Volley Ball',
+                    'Kids Play Area*',
+                    'Basket Ball',
+                    'Gym',
+                    'Pickle Ball Court',
+                    'Table of Snake Ladder Game',
+                    'Private Pool Room',
+                    'Private Pool',
+                    'Food Court',
+                    'Lawn Area',
+                    'River facing views',
+                    'Machan',
+                    'Car Parking',
+                    'Electricity',
+                    '24/7 water supply',
+                    'Mini Theatre',
+                  ].map((amenity) => (
+                    <li key={amenity} className="flex items-center mb-1">
+                      {amenityIcons[amenity] || null}
+                      <span>{amenity}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
           </div>
           {/* Gallery Section - hover cards like Kasara/Igatpuri */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -257,7 +285,7 @@ function Single() {
     const gallery = [
       {
         img: "/images/I-Bomaby-Villa.JPG",
-        title: "Mountain View Retreat",
+        title: "Mountain Views",
         desc: "Wake up to breathtaking mountain vistas and crisp air, with every villa designed to maximize the natural beauty of Igatpuri."
       },
       {
@@ -328,37 +356,70 @@ function Single() {
               {
                 title: 'IGATPURI',
                 content: <>
-                  <ul className="list-disc ml-6 mt-2 mb-4">
-                    <li>Discover Igatpuri – a peaceful and beautiful place to call home. It offers more than just land – it's a chance to enjoy a better, more relaxed way of living. Spread across 6 acres of scenic and quiet surroundings, located in the heart of nature, away from the noise and stress of city life.</li>
-                    <li><b>Tranquil Lifestyle</b> - Igatpuri is renowned for its calm atmosphere, fresh mountain air, and lush greenery. Residents enjoy a slower pace of life, perfect for unwinding and reconnecting with nature.</li>
-                    <li><b>Community Living</b> - The gated community fosters a sense of belonging, with friendly neighbors, shared spaces, and regular events that bring people together.</li>
-                    <li><b>Nature & Wellness</b> - Enjoy morning walks along nature-aligned pathways, yoga sessions in landscaped gardens, and easy access to hiking trails and meditation centers.</li>
-                    <li><b>Modern Amenities</b> - Igatpuri offers a blend of modern comforts and rustic charm, including clubhouses, playgrounds, and recreational facilities for all ages.</li>
-                    <li><b>Safety & Security</b> - Comprehensive security ensures peace of mind, with 24/7 surveillance, well-lit streets, and attentive staff.</li>
-                    <li><b>Generous Entrance & Layouts</b> - Wide entrance gates and well-defined layouts create a welcoming environment, making every arrival feel special.</li>
-                    <li><b>Intelligent Infrastructure</b> - Smart planning means reliable water, electricity, and connectivity, supporting a hassle-free lifestyle.</li>
-                    <li><b>Hassle-Free Connectivity</b> - Quick access to highways, transport hubs, and essential services makes daily life convenient and stress-free.</li>
-                  </ul>
-                  <div className="mt-4">
-                    <h4 className="text-lg font-bold text-yellow-200 mb-2">CONNECTIVITY</h4>
-                    <p className="mb-2">Bombay Villa Advisory Igatpuri offers the perfect balance of serene living with excellent connectivity to essential amenities and transportation hubs.</p>
-                    <ul className="list-none ml-6 mt-2 mb-4">
-                      <li><b>Samruddhi Maha Marg</b> <span className="text-yellow-300">5 Min</span></li>
-                      <li><b>Igatpuri Bus Depot</b> <span className="text-yellow-300">8 min</span></li>
-                      <li><b>Igatpuri Railway Station</b> <span className="text-yellow-300">10 Min</span></li>
-                      <li><b>Retail Mart</b> <span className="text-yellow-300">10 min</span></li>
-                      <li><b>Hospital</b> <span className="text-yellow-300">8 min</span></li>
-                      <li><b>Temple</b> <span className="text-yellow-300">2 min</span></li>
+                  <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                    <h4 className="text-yellow-400 text-2xl font-extrabold mb-6">Igatpuri</h4>
+                    <ul className="space-y-4">
+                      {[
+                        { label: 'Scenic Nature', desc: 'Discover Igatpuri – a peaceful and beautiful place to call home. It offers more than just land – it\'s a chance to enjoy a better, more relaxed way of living. Spread across 6 acres of scenic and quiet surroundings, located in the heart of nature, away from the noise and stress of city life.' },
+                        { label: 'Tranquil Lifestyle', desc: 'Igatpuri is renowned for its calm atmosphere, fresh mountain air, and lush greenery. Residents enjoy a slower pace of life, perfect for unwinding and reconnecting with nature.' },
+                        { label: 'Community Living', desc: 'The gated community fosters a sense of belonging, with friendly neighbors, shared spaces, and regular events that bring people together.' },
+                        { label: 'Nature & Wellness', desc: 'Enjoy morning walks along nature-aligned pathways, yoga sessions in landscaped gardens, and easy access to hiking trails and meditation centers.' },
+                        { label: 'Modern Amenities', desc: 'Igatpuri offers a blend of modern comforts and rustic charm, including clubhouses, playgrounds, and recreational facilities for all ages.' },
+                        { label: 'Safety & Security', desc: 'Comprehensive security ensures peace of mind, with 24/7 surveillance, well-lit streets, and attentive staff.' },
+                        { label: 'Generous Entrance & Layouts', desc: 'Wide entrance gates and well-defined layouts create a welcoming environment, making every arrival feel special.' },
+                        { label: 'Intelligent Infrastructure', desc: 'Smart planning means reliable water, electricity, and connectivity, supporting a hassle-free lifestyle.' },
+                        { label: 'Hassle-Free Connectivity', desc: 'Quick access to highways, transport hubs, and essential services makes daily life convenient and stress-free.' },
+                      ].map((item, i) => (
+                        <li key={item.label} className="flex items-center gap-4 bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition">
+                          <span className="text-yellow-400 text-2xl">{igatpuriFeatureIcons[i]}</span>
+                          <div>
+                            <span className="font-medium text-lg text-white">{item.label}</span><br />
+                            <span className="text-sm text-gray-100">{item.desc}</span>
+                          </div>
+                        </li>
+                      ))}
                     </ul>
                   </div>
-                  <div className="mt-4">
-                    <h4 className="text-lg font-bold text-yellow-200 mb-2">LIFESTYLE & ENVIRONMENT</h4>
-                    <ul className="list-disc ml-6 mt-2 mb-4">
-                      <li>Wake up to panoramic mountain views and the sound of birds.</li>
-                      <li>Enjoy cool breezes, clean air, and a climate that encourages outdoor activities year-round.</li>
-                      <li>Experience vibrant monsoons, lush landscapes, and seasonal waterfalls.</li>
-                      <li>Participate in wellness retreats, adventure sports, and cultural festivals unique to Igatpuri.</li>
-                      <li>Benefit from a low-density environment, ensuring privacy and space for every resident.</li>
+                  <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                    <h4 className="text-yellow-400 text-2xl font-extrabold mb-6">Connectivity</h4>
+                    <p className="mb-2 text-white">Bombay Villa Advisory Igatpuri offers the perfect balance of serene living with excellent connectivity to essential amenities and transportation hubs.</p>
+                    <ul className="space-y-4">
+                      {[
+                        { label: 'Samruddhi Maha Marg', desc: '5 Min' },
+                        { label: 'Igatpuri Bus Depot', desc: '8 min' },
+                        { label: 'Igatpuri Railway Station', desc: '10 Min' },
+                        { label: 'Retail Mart', desc: '10 min' },
+                        { label: 'Hospital', desc: '8 min' },
+                        { label: 'Temple', desc: '2 min' },
+                      ].map((item, i) => (
+                        <li key={item.label} className="flex items-center gap-4 bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition">
+                          <span className="text-yellow-400 text-2xl">{igatpuriConnectivityIcons[i]}</span>
+                          <div>
+                            <span className="font-medium text-lg text-white">{item.label}</span>
+                            <span className="ml-2 text-sm text-yellow-300">{item.desc}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                    <h4 className="text-yellow-400 text-2xl font-extrabold mb-6">Lifestyle & Environment</h4>
+                    <ul className="space-y-4">
+                      {[
+                        { label: 'Mountain Views & Birds', desc: 'Wake up to panoramic mountain views and the sound of birds.' },
+                        { label: 'Cool Breezes & Clean Air', desc: 'Enjoy cool breezes, clean air, and a climate that encourages outdoor activities year-round.' },
+                        { label: 'Monsoons & Waterfalls', desc: 'Experience vibrant monsoons, lush landscapes, and seasonal waterfalls.' },
+                        { label: 'Wellness & Festivals', desc: 'Participate in wellness retreats, adventure sports, and cultural festivals unique to Igatpuri.' },
+                        { label: 'Low-Density Environment', desc: 'Benefit from a low-density environment, ensuring privacy and space for every resident.' },
+                      ].map((item, i) => (
+                        <li key={item.label} className="flex items-center gap-4 bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition">
+                          <span className="text-yellow-400 text-2xl">{igatpuriLifestyleIcons[i]}</span>
+                          <div>
+                            <span className="font-medium text-lg text-white">{item.label}</span><br />
+                            <span className="text-sm text-gray-100">{item.desc}</span>
+                          </div>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </>
@@ -366,39 +427,55 @@ function Single() {
               {
                 title: 'INFRASTRUCTURE FEATURES & OWNERSHIP BENEFITS',
                 content: <>
-                  <h4 className="text-lg font-bold text-yellow-200 mb-2">INFRASTRUCTURE FEATURES</h4>
-                  <ul className="list-disc ml-6 mt-2 mb-4">
-                    <li>We've invested in high-quality infrastructure to ensure a comfortable, secure, and hassle-free living experience.</li>
-                    <li>Welcome Entrance Gate</li>
-                    <li>All-Weather Roads</li>
-                    <li>Let-Lit Streets</li>
-                    <li>Fully-Compounded Community</li>
-                    <li>Water Reservoirs</li>
-                    <li>Individual Plot Compounding</li>
-                    <li>Water Softening Plant</li>
-                    <li>Dedicated Central Water Tank</li>
-                    <li>Dedicated Electrical Substation</li>
-                    <li>Electricity & Water Supply</li>
-                    <li>Rainwater Harvesting System</li>
-                    <li>Solar-Powered Street Lighting</li>
-                    <li>Underground Drainage Network</li>
-                    <li>Fire Safety Hydrants</li>
-                    <li>Children’s Play Area</li>
-                    <li>Community Garden & Park</li>
-                    <li>High-Speed Internet Connectivity</li>
-                  </ul>
-                  <h4 className="text-lg font-bold text-yellow-200 mb-2">OWNERSHIP BENEFITS</h4>
-                  <ul className="list-disc ml-6 mt-2 mb-4">
-                    <li>We make the journey to ownership smooth and hassle-free, with multiple benefits designed to give you peace of mind.</li>
-                    <li><b>Customized Options</b> - We offer customized options to match your needs and budget, ensuring you find the perfect plot for your dream home.</li>
-                    <li><b>100% Clear Documents</b> - We take pride in providing documents that are 100% clear. Every contract, report, or document we deliver is easy to understand and communicates the message perfectly.</li>
-                    <li><b>Construction Facility</b> - We offer complete support for construction projects, including help with finding and buying plots. From planning to final construction, our team is with you at every step.</li>
-                    <li><b>Immediate Possession</b> - We offer immediate possession with full transparency and smooth processes. Our team ensures quick and hassle-free ownership transfers.</li>
-                    <li><b>Loan & EMI Facilities</b> - We provide loan and EMI options that fit your needs and budget. Our flexible plans make repayment easy and stress-free. With clear terms and strong support.</li>
-                    <li><b>Expert Guidance</b> - Our team of experts is available to guide you through every step of the process, from selection to possession and beyond.</li>
-                    <li><b>Flexible Payment Plans</b> - Choose from a variety of payment options to suit your financial needs, making ownership accessible and convenient.</li>
-                    <li><b>After-Sales Support</b> - Enjoy ongoing assistance and support even after possession, ensuring your experience remains smooth and worry-free.</li>
-                  </ul>
+                  <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                    <h4 className="text-yellow-400 text-2xl font-extrabold mb-6">Infrastructure Features</h4>
+                    <ul className="space-y-4">
+                      {[
+                        'High-quality infrastructure for comfortable, secure, and hassle-free living.',
+                        'Welcome Entrance Gate',
+                        'All-Weather Roads',
+                        'Well-Lit Streets',
+                        'Fully-Compounded Community',
+                        'Water Reservoirs',
+                        'Individual Plot Compounding',
+                        'Water Softening Plant',
+                        'Dedicated Central Water Tank',
+                        'Dedicated Electrical Substation',
+                        'Electricity & Water Supply',
+                        'Rainwater Harvesting System',
+                        'Solar-Powered Street Lighting',
+                        'Underground Drainage Network',
+                        'Fire Safety Hydrants',
+                        
+                      ].map((desc, i) => (
+                        <li key={desc} className="flex items-center gap-4 bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition">
+                          <span className="text-yellow-400 text-2xl">{igatpuriInfraIcons[i]}</span>
+                          <span className="text-lg text-white font-medium">{desc}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto">
+                    <h4 className="text-yellow-400 text-2xl font-extrabold mb-6">Ownership Benefits</h4>
+                    <ul className="space-y-4">
+                      {[
+                        'Smooth and hassle-free ownership journey with multiple benefits.',
+                        'Customized Options - We offer customized options to match your needs and budget, ensuring you find the perfect plot for your dream home.',
+                        '100% Clear Documents - We take pride in providing documents that are 100% clear. Every contract, report, or document we deliver is easy to understand and communicates the message perfectly.',
+                        'Construction Facility - We offer complete support for construction projects, including help with finding and buying plots. From planning to final construction, our team is with you at every step.',
+                        'Immediate Possession - We offer immediate possession with full transparency and smooth processes. Our team ensures quick and hassle-free ownership transfers.',
+                        'Loan & EMI Facilities - We provide loan and EMI options that fit your needs and budget. Our flexible plans make repayment easy and stress-free. With clear terms and strong support.',
+                        'Expert Guidance - Our team of experts is available to guide you through every step of the process, from selection to possession and beyond.',
+                        'Flexible Payment Plans - Choose from a variety of payment options to suit your financial needs, making ownership accessible and convenient.',
+                        'After-Sales Support - Enjoy ongoing assistance and support even after possession, ensuring your experience remains smooth and worry-free.',
+                      ].map((desc, i) => (
+                        <li key={desc} className="flex items-center gap-4 bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition">
+                          <span className="text-yellow-400 text-2xl">{igatpuriOwnershipIcons[i]}</span>
+                          <span className="text-lg text-white font-medium">{desc}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </>
               }
             ].map((card, idx) => (
@@ -624,37 +701,62 @@ function Single() {
             {[{
               title: 'Features of Kasara',
               content: <>
-                <ul className="list-disc ml-6 mt-2 mb-4">
-                  <li><b>Samruddhi Expressway Connectivity</b><br/>Rapid, modern expressway access that dramatically cuts travel time to Mumbai and Nashik — ideal for weekend travellers and commuters.</li>
-                  <li><b>Gateway to Kasara Ghat (Scenic Mountain Pass)</b><br/>Positioned near the dramatic Kasara (Thal) Ghat — panoramic valley views, dramatic monsoon scenery and photographic backdrops.</li>
-                  <li><b>Trekking & Adventure Hub</b><br/>Easy access to popular treks and forts like Harishchandragad, Kalsubai and Tringalwadi — perfect for buyers who value active, outdoor lifestyles.</li>
-                  <li><b>Bhavali Dam & Lakeside Escapes</b><br/>Short drives to Bhavali Dam, Arthur Lake and other reservoirs for peaceful picnics, boating and nature walks.</li>
-                  <li><b>Established Spiritual & Wellness Centers</b><br/>Close to Vipassana and meditation centers (internationally known retreats) — attractive for wellness-focused buyers.</li>
-                  <li><b>Waterfalls & Monsoon Beauty</b><br/>Numerous nearby waterfalls and seasonal cascades create unforgettable monsoon scenery and cool microclimate — great for nature lovers.</li>
-                  <li><b>Strong Rail & Road Links</b><br/>Kasara is on the Central Railway line and well connected by road — making quick site visits and weekend travel easy for Mumbai buyers.</li>
-                  <li><b>Cooler Climate & Fresh Air</b><br/>Elevated terrain and vegetation provide noticeably cooler temperatures than the city — a genuine “escape” from heat and pollution.</li>
-                  <li><b>Adventure & Leisure Activities Nearby</b><br/>Options for watersports, valley treks, camping, and day-trips (Camel Valley, Bhatsa river valley, local lakes) — good for rental/retreat potential.</li>
-                  <li><b>Low-density, Private Living</b><br/>The region supports boutique, low-density villa projects — privacy and quiet are easy to promise without competing high-rise clutter.</li>
-                  <li><b>Eco & Agri Experiences</b><br/>Proximity to rural landscapes, orchards and small farms — opportunity for village-style weekend experiences, farm visits and agritourism add-ons.</li>
-                  <li><b>Improving Infrastructure & Future Upside</b><br/>Ongoing regional improvements (expressway, rail upgrades) point to better connectivity and growing demand for weekend homes and long-term appreciation.</li>
-                  <li><b>Vibrant Local Markets</b><br/>Experience the charm of Kasara’s bustling local markets, offering fresh produce, artisanal goods, and a taste of authentic regional culture right at your doorstep.</li>
-                </ul>
+                <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                  <ul className="space-y-4">
+                    {[
+                      { label: 'Samruddhi Expressway Connectivity', desc: 'Rapid, modern expressway access that dramatically cuts travel time to Mumbai and Nashik — ideal for weekend travellers and commuters.' },
+                      { label: 'Gateway to Kasara Ghat (Scenic Mountain Pass)', desc: 'Positioned near the dramatic Kasara (Thal) Ghat — panoramic valley views, dramatic monsoon scenery and photographic backdrops.' },
+                      { label: 'Trekking & Adventure Hub', desc: 'Easy access to popular treks and forts like Harishchandragad, Kalsubai and Tringalwadi — perfect for buyers who value active, outdoor lifestyles.' },
+                      { label: 'Bhavali Dam & Lakeside Escapes', desc: 'Short drives to Bhavali Dam, Arthur Lake and other reservoirs for peaceful picnics, boating and nature walks.' },
+                      { label: 'Established Spiritual & Wellness Centers', desc: 'Close to Vipassana and meditation centers (internationally known retreats) — attractive for wellness-focused buyers.' },
+                      { label: 'Waterfalls & Monsoon Beauty', desc: 'Numerous nearby waterfalls and seasonal cascades create unforgettable monsoon scenery and cool microclimate — great for nature lovers.' },
+                      { label: 'Strong Rail & Road Links', desc: 'Kasara is on the Central Railway line and well connected by road — making quick site visits and weekend travel easy for Mumbai buyers.' },
+                      { label: 'Cooler Climate & Fresh Air', desc: 'Elevated terrain and vegetation provide noticeably cooler temperatures than the city — a genuine “escape” from heat and pollution.' },
+                      { label: 'Adventure & Leisure Activities Nearby', desc: 'Options for watersports, valley treks, camping, and day-trips (Camel Valley, Bhatsa river valley, local lakes) — good for rental/retreat potential.' },
+                      { label: 'Low-density, Private Living', desc: 'The region supports boutique, low-density villa projects — privacy and quiet are easy to promise without competing high-rise clutter.' },
+                      { label: 'Eco & Agri Experiences', desc: 'Proximity to rural landscapes, orchards and small farms — opportunity for village-style weekend experiences, farm visits and agritourism add-ons.' },
+                      { label: 'Improving Infrastructure & Future Upside', desc: 'Ongoing regional improvements (expressway, rail upgrades) point to better connectivity and growing demand for weekend homes and long-term appreciation.' },
+                      { label: 'Vibrant Local Markets', desc: 'Experience the charm of Kasara’s bustling local markets, offering fresh produce, artisanal goods, and a taste of authentic regional culture right at your doorstep.' },
+                    ].map((item, i) => (
+                      <li key={item.label} className="flex items-start gap-4 bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition">
+                        <span className="text-yellow-400 text-2xl">{kasaraFeatureIcons[i]}</span>
+                        <div>
+                          <span className="font-medium text-lg text-white">{item.label}</span><br />
+                          <span className="text-sm text-gray-100">{item.desc}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </>
             }, {
               title: 'Why choose Kasara?',
               content: <>
-                <ul className="list-disc ml-6 mt-2 mb-4">
-                  <li><b>Surrounded by mountains</b><br/>Embrace tranquil living with our villas nestled amidst breathtaking mountains. Enjoy picturesque views, fresh air, and a serene environment, perfect for a peaceful and rejuvenating lifestyle away from the city's hustle and bustle.</li>
-                  <li><b>Easy documentation and Loan</b><br/>Purchasing villas from us is clear and straightforward. Our simple legal procedures and minimal paperwork are handled by our in-house expert, who also helps secure the best home loan rates, all from the comfort of your home</li>
-                  <li><b>Maintenance Free</b><br/>Our property management company offers housekeeping services, allowing you to fully enjoy your leisure time without the burden of chores. Our rental property is maintenance-free, ensuring a hassle-free living experience.</li>
-                  <li><b>Assured monthly Rentals</b><br/>Invest with confidence with our assured monthly rental program. Our villas offer a reliable source of income, making them an excellent investment choice. Enjoy luxurious living while your property generates consistent returns.</li>
-                  <li><b>Secured gated Community</b><br/>Live with peace of mind in our secured gated community. With 24/7 security and surveillance, our villas provide a safe environment for you and your family, allowing you to relax and enjoy life to the fullest.</li>
-                  <li><b>35+ Amenities</b><br/>Our property features over 35 + amenities to enhance your lifestyle, including a swimming pool, outdoor jacuzzi, children's play areas, and community halls, ensuring your comfort and convenience. Enjoy a rich living experience with our facilities.</li>
-                  <li><b>Prime Location & Accessibility</b><br/>Strategically located for easy access to Mumbai and Nashik, our villas offer seamless connectivity for both weekend getaways and daily commutes.</li>
-                  <li><b>Personalized Villa Design</b><br/>Choose from a range of villa layouts and customize interiors to match your taste, ensuring your home is truly unique and tailored to your lifestyle.</li>
-                  <li><b>Eco-friendly Initiatives</b><br/>Our community incorporates sustainable practices, including rainwater harvesting, solar lighting, and green landscaping for a healthier environment.</li>
-                  <li><b>Active Community Life</b><br/>Enjoy a vibrant social atmosphere with regular events, wellness programs, and recreational activities, fostering a sense of belonging and engagement.</li>
-                </ul>
+                <div className="bg-gray-900 rounded-xl p-8 border border-yellow-400 max-w-2xl mx-auto mb-8">
+                  <ul className="space-y-4">
+                    {[
+                      { label: 'Surrounded by mountains', desc: 'Embrace tranquil living with our villas nestled amidst breathtaking mountains. Enjoy picturesque views, fresh air, and a serene environment, perfect for a peaceful and rejuvenating lifestyle away from the city\'s hustle and bustle.' },
+                      { label: 'Easy documentation and Loan', desc: 'Purchasing villas from us is clear and straightforward. Our simple legal procedures and minimal paperwork are handled by our in-house expert, who also helps secure the best home loan rates, all from the comfort of your home' },
+                      { label: 'Maintenance Free', desc: 'Our property management company offers housekeeping services, allowing you to fully enjoy your leisure time without the burden of chores. Our rental property is maintenance-free, ensuring a hassle-free living experience.' },
+                      { label: 'Assured monthly Rentals', desc: 'Invest with confidence with our assured monthly rental program. Our villas offer a reliable source of income, making them an excellent investment choice. Enjoy luxurious living while your property generates consistent returns.' },
+                      { label: 'Secured gated Community', desc: 'Live with peace of mind in our secured gated community. With 24/7 security and surveillance, our villas provide a safe environment for you and your family, allowing you to relax and enjoy life to the fullest.' },
+                      { label: '35+ Amenities', desc: 'Our property features over 35 + amenities to enhance your lifestyle, including a swimming pool, outdoor jacuzzi, children\'s play areas, and community halls, ensuring your comfort and convenience. Enjoy a rich living experience with our facilities.' },
+                      { label: 'Prime Location & Accessibility', desc: 'Strategically located for easy access to Mumbai and Nashik, our villas offer seamless connectivity for both weekend getaways and daily commutes.' },
+                      { label: 'Personalized Villa Design', desc: 'Choose from a range of villa layouts and customize interiors to match your taste, ensuring your home is truly unique and tailored to your lifestyle.' },
+                      { label: 'Eco-friendly Initiatives', desc: 'Our community incorporates sustainable practices, including rainwater harvesting, solar lighting, and green landscaping for a healthier environment.' },
+                      { label: 'Active Community Life', desc: 'Enjoy a vibrant social atmosphere with regular events, wellness programs, and recreational activities, fostering a sense of belonging and engagement.' },
+                      { label: 'Award-winning Service', desc: 'Experience the difference with our award-winning customer service team, dedicated to making your villa purchase and ownership seamless, enjoyable, and worry-free.' },
+                    ].map((item, i) => (
+                      <li key={item.label} className="flex items-center gap-4 bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition">
+                        <span className="text-yellow-400 text-2xl">{kasaraWhyIcons[i]}</span>
+                        <div>
+                          <span className="font-medium text-lg text-white">{item.label}</span><br />
+                          <span className="text-sm text-gray-100">{item.desc}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </>
             }].map((card, idx) => (
               <motion.div

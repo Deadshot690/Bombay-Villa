@@ -1,169 +1,173 @@
-import React from "react";
-import Container from "../components/Container";
-import { motion } from "framer-motion";
-
-// Videos are now in public/images, use direct path
-
-
-// ...removed image imports, use public/images path instead
+import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
+import HeroSection from '../components/heroSection/HeroSection';
+import { useEffect, useRef, useState } from 'react';
 
 const galleryImages = [
-  "/images/Apartment.jpg",
-  //"/images/Bombay-Villa3.JPG",
-  "/images/IMG_1007.JPG",
-  "/images/IMG_1312.JPG",
-  "/images/IMG_1607.JPG",
-  "/images/IMG_1634.JPG",
-  "/images/IMG_1636.JPG",
-  "/images/IMG_20260202_134023.jpg",
-  //"/images/img5.jpeg",
-  //"/images/IMG_20260202_134052.jpg",
-  "/images/IMG_4607.JPG",
-  //"/images/IMG_4931.JPG",
-  //"/images/IMG_4934_1.JPG",
-  "/images/IMG_4974.JPG",
-  "/images/I-Bomaby-Villa.JPG",
-  "/images/I-Bomaby-Villa1.JPG",
-  //"/images/I-Bomaby-Villa2.JPG",
-  "/images/I-Bomaby-Villa3.JPG",
-  "/images/K-Bombay-villa.JPG",
-    //"/images/IMG_20260202_134038.jpg",
-  "/images/K-Bombay-Villa2.JPG",
-   // "/images/img5.jpeg",
-  //"/images/New.jpeg",
-  //"/images/commercial-1.jpg",
-  // "/images/email.png", // removed
-  // "/images/experience-iconnn.png", // removed
-  "/images/hotel-apartment.jpg",
-  "/images/img.jpeg",
-  //images/img1.jpeg",
-  "/images/img2.jpeg",
-  "/images/img3.jpeg",
-  "/images/img4.jpeg",
-   // "/images/img5.jpeg",
-  //"/images/investment.jpg",
-  // "/images/investment.jpg", // removed
-  // "/images/location-1.png", // removed
-  //"/images/logo.jpg",
- // "/images/main.JPG",
-  //"/images/medical.jpg",
-  //"/images/new1.jpeg",
-  //"/images/new2.jpeg",
-  //"/images/new3.jpeg",
-  "/images/new4.jpeg",
-  //"/images/new5.jpeg",
-  //"/images/office-1.jpg",
-  // "/images/phone.png", // removed
-  "/images/r1.jpg",
-  "/images/r2.jpeg",
- // "/images/r3.jpeg",
-  "/images/r4.jpeg",
- // "/images/sitevisit.jpg",
- // "/images/S-bombay-villa.JPG",
-  //"/images/v5.jpg",
-  //"/images/S-Bombay-villa3.JPG",
- // "/images/new2.jpeg",
-  // "/images/trust-icon.png", // removed
-  //"/images/v1.jpeg",
- // "/images/v2.jpeg",
-  "/images/v3.jpeg",
-  "/images/v4.jpeg",
- // "/images/Video1.MP4",
-  //"/images/Video2.MP4",
-  //"/images/villa.jpg",
-  //"/images/villa1.jpg",
-  //"/images/villa2.jpeg",
-  //"/images/villa3.jpeg",
-  //"/images/villa4.jpeg",
-  "/images/villa5.jpg",
-  // "/images/vision.jpg", // removed
-  "/images/woman-working-pharmacy-wearing-coat.jpg",
+  '/images/Apartment.jpg',
+  '/images/IMG_1007.JPG',
+  '/images/IMG_1312.JPG',
+  '/images/IMG_1607.JPG',
+  '/images/IMG_1634.JPG',
+  '/images/IMG_1636.JPG',
+  '/images/IMG_20260202_134023.jpg',
+  '/images/IMG_4607.JPG',
+  '/images/IMG_4974.JPG',
+  '/images/I-Bomaby-Villa.JPG',
+  '/images/I-Bomaby-Villa1.JPG',
+  '/images/I-Bomaby-Villa3.JPG',
+  '/images/K-Bombay-villa.JPG',
+  '/images/K-Bombay-Villa2.JPG',
+  '/images/K-Bombay-Villa3.JPG',
+  '/images/hotel-apartment.jpg',
+  '/images/img.jpeg',
+  '/images/img2.jpeg',
+  '/images/img3.jpeg',
+  '/images/img4.jpeg',
+  '/images/new4.jpeg',
+  '/images/r1.jpg',
+  '/images/r2.jpeg',
+  '/images/r4.jpeg',
+  '/images/v1.jpeg',
+  '/images/v3.jpeg',
+  '/images/v4.jpeg',
+  '/images/villa5.jpg',
+  '/images/woman-working-pharmacy-wearing-coat.jpg',
+  '/images/villa.jpg',
+  '/images/villa4.jpeg',
 ];
 
 const Gallery = () => {
-  return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section with looping video, full height */}
-      <div className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden border-b-8 border-yellow-400 shadow-2xl">
-        <video
-          src="/images/Video1.MP4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute w-full h-full object-cover object-center z-0"
-          style={{ minHeight: '100%', minWidth: '100%' }}
-        />
-        <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="relative z-10 text-center"
-        >
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg tracking-tight mb-2">
-            Gallery
-          </h1>
-          <div className="mx-auto w-24 h-1 bg-yellow-400 rounded-full mb-2" />
-          <p className="text-lg md:text-2xl text-yellow-100 font-medium drop-shadow-sm">
-            Explore our collection of photos and videos
-          </p>
-        </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-0" />
-      </div>
-      <Container>
-        {/* Mobile and images grid, mobile as first grid item, images start from its right */}
-        <div className="w-full mt-12 mb-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 items-start">
-            {/* Mobile phone as first grid item, spanning two rows */}
-            <div className="w-full flex justify-center items-start col-span-1">
-              <div className="relative w-[260px] h-[520px] bg-[#222] rounded-[40px] shadow-2xl border-4 border-gray-700 flex items-center justify-center">
-                {/* iPhone notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[18px] bg-black rounded-b-2xl z-20" />
-                {/* iPhone screen */}
-                <video
-                  src="/images/Video2.MP4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute top-[32px] left-[16px] w-[228px] h-[456px] rounded-[32px] object-cover z-10"
-                  style={{ boxShadow: "0 0 24px #FFD70055" }}
-                />
-                {/* iPhone border shine */}
-                <div className="absolute inset-0 rounded-[40px] border-2 border-yellow-400 pointer-events-none" style={{ boxShadow: "0 0 32px #FFD70033" }} />
-              </div>
-            </div>
-            {/* Images fill the rest of the grid */}
-            {galleryImages.map((img, idx) => (
-              <motion.div
-                key={img}
-                className="rounded-xl overflow-hidden shadow-lg bg-[#181818] border border-yellow-900/30 group w-full h-[320px] md:h-[340px] lg:h-[380px] flex items-center justify-center relative"
-                initial={{ opacity: 0, y: 40, scale: 0.95, filter: 'blur(6px)' }}
-                whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
-                whileHover={{ scale: 1.06, boxShadow: '0 8px 32px #FFD70055', zIndex: 10 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.03 * idx, type: 'spring', stiffness: 120 }}
-              >
-                <motion.img
-                  src={img}
-                  alt="gallery"
-                  className="w-full h-full object-cover transition-all duration-300"
-                  loading="lazy"
-                  decoding="async"
-                  whileHover={{ scale: 1.12, filter: 'brightness(1.15) saturate(1.2) blur(0px)' }}
-                  transition={{ type: 'spring', stiffness: 200, damping: 18 }}
-                />
-                {/* Overlay effect on hover */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-80 transition-all duration-300 pointer-events-none"
-                  whileHover={{ opacity: 0.8 }}
-                />
-              </motion.div>
-            ))}
-          </div>
+  const sectionRef = useRef(null);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.utils.toArray('.gallery-reveal').forEach((el, i) => {
+  //       gsap.fromTo(
+  //         el,
+  //         { opacity: 0, y: 40 },
+  //         {
+  //           opacity: 1,
+  //           y: 0,
+  //           duration: 0.6,
+  //           delay: ((i % 6) * 0.08),
+  //           ease: 'power3.out',
+  //           scrollTrigger: {
+  //             trigger: el,
+  //             start: 'top 90%',
+  //             toggleActions: 'play none none none',
+  //           },
+  //         }
+  //       );
+  //     });
+  //   }, sectionRef);
+  //   return () => ctx.revert();
+  // }, []);
+
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (lightboxIndex === null) return;
+      if (e.key === 'Escape') setLightboxIndex(null);
+      if (e.key === 'ArrowRight') setLightboxIndex((prev) => prev !== null ? (prev + 1) % galleryImages.length : null);
+      if (e.key === 'ArrowLeft') setLightboxIndex((prev) => prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : null);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [lightboxIndex]);
+
+    return (
+      <>
+        <Helmet>
+          <title>Gallery — Bombay Villa Advisory</title>
+          <meta name="description" content="Step inside our world. Discover a curated gallery of our villas, projects, and the lifestyle we create." />
+        </Helmet>
+        <Header />
+        <div style={{ position: 'relative' }}>
+          <HeroSection page="Gallery" image="/images/New.jpeg" />
+          {/* Bottom gradient fade for Hero section */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              height: '140px',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%)',
+              width: '100%',
+              zIndex: 2,
+              pointerEvents: 'none',
+            }}
+          />
         </div>
-      </Container>
-    </div>
+        <div ref={sectionRef}>
+          <div className="pb-32 section-padding" style={{ marginTop: '-80px', position: 'relative', zIndex: 2 }}>
+            <div className="max-w-7xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-4">
+              {galleryImages.map((src, i) => (
+                <div
+                  key={i}
+                  className="gallery-reveal break-inside-avoid overflow-hidden cursor-pointer group mb-4"
+                  style={{
+                    borderRadius: '1.25rem',
+                    boxShadow: '0 8px 32px 0 rgba(0,0,0,0.12), 0 1.5px 4px 0 rgba(0,0,0,0.10)',
+                    backdropFilter: 'blur(2px)',
+                    transition: 'transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)',
+                  }}
+                  onClick={() => setLightboxIndex(i)}
+                  tabIndex={0}
+                >
+                  <img
+                    src={src}
+                    alt={`Gallery ${i + 1}`}
+                    className="w-full h-auto object-cover group-hover:scale-105"
+                    style={{
+                      transition: 'transform 0.3s cubic-bezier(.4,0,.2,1)',
+                      borderRadius: '1.25rem',
+                      display: 'block',
+                    }}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Lightbox */}
+          {lightboxIndex !== null && (
+            <div
+              className="fixed inset-0 z-[100] bg-foreground/90 flex items-center justify-center p-4"
+              onClick={() => setLightboxIndex(null)}
+            >
+              <button
+                className="absolute top-6 right-6 text-primary-foreground text-2xl hover:opacity-70"
+                onClick={() => setLightboxIndex(null)}
+              >
+                ✕
+              </button>
+              <button
+                className="absolute left-6 top-1/2 -translate-y-1/2 text-primary-foreground text-3xl hover:opacity-70"
+                onClick={(e) => { e.stopPropagation(); setLightboxIndex((lightboxIndex - 1 + galleryImages.length) % galleryImages.length); }}
+              >
+                ‹
+              </button>
+              <img
+                src={galleryImages[lightboxIndex]}
+                alt={`Gallery ${lightboxIndex + 1}`}
+                className="max-w-full max-h-[85vh] object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute right-6 top-1/2 -translate-y-1/2 text-primary-foreground text-3xl hover:opacity-70"
+                onClick={(e) => { e.stopPropagation(); setLightboxIndex((lightboxIndex + 1) % galleryImages.length); }}
+              >
+                ›
+              </button>
+            </div>
+          )}
+        </div>
+        {/* Footer is rendered by App.jsx, do not render here to avoid duplicate footers */}
+      </>
   );
 };
 

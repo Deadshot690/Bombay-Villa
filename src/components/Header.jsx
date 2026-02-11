@@ -50,34 +50,9 @@ function Header() {
       <div className="container relative mx-auto px-[20px] flex items-center justify-between">
         <div>
           <Link to={"/"}>
-            <AnimatePresence>
-              <motion.div
-                key={window.location.pathname}
-                initial={{ opacity: 0, scale: 0.5, rotate: -30 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: 30 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                style={{ position: "relative", display: "inline-block" }}
-              >
-                <img src={logo} alt="new capital logo" className="w-[110px]" />
-                {/* Light sweep effect */}
-                <motion.div
-                  initial={{ left: "-80%", opacity: 0 }}
-                  animate={{ left: "120%", opacity: [0, 0.8, 0] }}
-                  transition={{ duration: 1.1, delay: 0.3 }}
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "40%",
-                    height: "100%",
-                    background: "linear-gradient(120deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.1) 100%)",
-                    filter: "blur(6px)",
-                    pointerEvents: "none",
-                  }}
-                />
-              </motion.div>
-            </AnimatePresence>
+            <div style={{ position: "relative", display: "inline-block" }}>
+              <img src={logo} alt="new capital logo" className="w-[110px]" />
+            </div>
           </Link>
         </div>
         <ul
