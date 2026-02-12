@@ -1,7 +1,6 @@
 # Real Estate Website
 
 A modern, fully responsive real estate platform built with React.js and Tailwind CSS. This website showcases luxury villas, apartments, and commercial properties, providing users with a seamless and engaging experience.
-Live Demo: https://bombay-villa-advisory.pages.dev/
 
 ---
 
@@ -81,7 +80,7 @@ root/
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/Deadshot690/Bombay-Villa.git
+   git clone https://github.com/Deadshot690/Real-Estate-Website.git
    cd Real-Estate-Website-main
    ```
 2. **Install dependencies:**
